@@ -31,7 +31,7 @@ export async function composeApology(modelId, situation, severity) {
 
 ${guidance}
 
-Reference the actual specific details of the situation described — do not write a generic template. Output ONLY the apology message itself, no preamble like "Here's your apology:", no quotation marks, no labels.`,
+Reference the actual specific details of the situation described — do not write a generic template. Do NOT invent new specific events, promises, plans, or details that were not mentioned in the situation (e.g. if no party or gift was mentioned, don't invent one). Output ONLY the apology message itself, no preamble like "Here's your apology:", no quotation marks, no labels.`,
       },
       { role: "user", content: `Situation: ${situation}` },
     ],
